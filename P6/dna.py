@@ -84,6 +84,8 @@ for row in reader:
         match = True
         break
 
+csvfile.close()
+
 
 # Prints profiling results
 if match == True:
