@@ -40,7 +40,6 @@ while i < (len(strs) - 1):
     # Checks every nucleotide (char) in 'dna' for the current str
     j = 0
     while j < len(dna):
-        count[i] = 0
 
         # Adds 1 to count if str is present
         if dna[j:(j + len(strs[i + 1]))] == strs[i + 1]:
@@ -59,18 +58,21 @@ while i < (len(strs) - 1):
             if count[i] > maxcount[i]:
                 maxcount[i] = count[i]
 
+        count[i] = 0
         j += 1
+
     i += 1
 
 
-# 'Match' stores the results of the profiling, initialized to False
+# 'Match' and 'name' store the results of the profiling
 match = False
+name = list()
 
 
 # Generates profiling results
 for row in reader:
 
-    # Stores str values from csv (as int) in 'combi', for each individual
+    # Temporarily stores str values from csv (as int) for each individual
     combi = [0] * (len(strs) - 1)
     i = 0
     while i < (len(strs) - 1):
@@ -79,16 +81,20 @@ for row in reader:
 
     # Checks if 'maxcount' matches 'combi'
     if maxcount == combi:
-        # If there is a match, stores the name of the individual in 'name', and updates 'match' to True
-        name = row[0]
         match = True
-        break
+        name.append(row[0])
+        # Include break to check for single names/matches only
+        # break
 
 csvfile.close()
 
 
 # Prints profiling results
 if match == True:
-    print(name)
+    i = 0
+    while i < len(name):
+        print(name[i])
+        i += 1
+
 else:
     print("No match")
