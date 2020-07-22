@@ -3,14 +3,8 @@ import sys
 
 # DNA profiling program
 
-
-# Terminates program if there are more/less than 2 command-line arguments
-if len(sys.argv) != 3:
-    print("Usage: python dna.py data.csv sequence.txt")
-    sys.exit(1)
-
-# Terminates program if any of the file extensions are incorrectly entered
-elif sys.argv[1].endswith(".csv") == False or sys.argv[2].endswith(".txt") == False:
+# Terminates program if there are more/less than 2 command-line arguments, or if file extensions are incorrectly entered
+if len(sys.argv) != 3 or sys.argv[1].endswith(".csv") == False or sys.argv[2].endswith(".txt") == False:
     print("Usage: python dna.py data.csv sequence.txt")
     sys.exit(1)
 
@@ -18,8 +12,8 @@ elif sys.argv[1].endswith(".csv") == False or sys.argv[2].endswith(".txt") == Fa
 # Opens and reads csv file, stores strs from column headers (from row 1) in 'strs'
 # Note: File not closed as it is needed for matching later
 csvfile = open(sys.argv[1], "r")
-reader = csv.reader(csvfile)
-strs = next(reader)
+reader = csv.DictReader(csvfile)
+strs = reader.fieldnames
 
 # Opens and reads txt file, stores dna sequence in 'dna', and closes file
 with open(sys.argv[2], "r") as txtfile:
@@ -76,13 +70,13 @@ for row in reader:
     combi = [0] * (len(strs) - 1)
     i = 0
     while i < (len(strs) - 1):
-        combi[i] = int(row[i + 1])
+        combi[i] = int(row[strs[i + 1]])
         i += 1
 
     # Checks if 'maxcount' matches 'combi'
     if maxcount == combi:
         match = True
-        name.append(row[0])
+        name.append(row[strs[0]])
         # Include break to check for single names/matches only
         # break
 
