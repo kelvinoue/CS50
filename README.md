@@ -13,5 +13,5 @@ https://cs50.harvard.edu/x/2020/
 - mario_alt.c - Alternative implementation of mario.c using recursion.  
 - credit.c - Checks credit card numbers for card type and validity. Uses arrays, for loops, arithmetic.  
 ### P2:  
-- readability.c - Computes the approximate grade level needed to comprehend text. Uses for loops, ctype.h & string.h library functions, arithmetic.  
-- substitution.c - Implements a substitution cipher. Uses for loops, ctype.h & string.h library functions, arithmetic.  
+- readability.c - Computes the approximate grade level needed to comprehend text. Uses for loops, ctype.h & string.h library functions.  
+- substitution.c - Implements a substitution cipher. Uses for loops, ctype.h & string.h library functions.  
