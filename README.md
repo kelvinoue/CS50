@@ -15,7 +15,7 @@ https://cs50.harvard.edu/x/2020/
 - credit.c - Checks credit card numbers for card type and validity. Uses arrays, for loops, arithmetic.  
 ### P2:  
 - readability.c - Computes the approximate grade level needed to comprehend text. Uses for loops, ctype.h & string.h library functions.  
-- substitution.c - Implementaion of a substitution cipher to encrypt plaintext. Uses for loops, ctype.h & string.h library functions.  
+- substitution.c - Implementation of a substitution cipher to encrypt plaintext. Uses for loops, ctype.h & string.h library functions.  
 ### P6:  
 - hello.py - P1's hello.c in Python.  
 - mario.py - P1's mario.c in Python. Uses while loops.  
