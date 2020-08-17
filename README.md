@@ -7,7 +7,7 @@ https://cs50.harvard.edu/x/2020/
 - P0: Scratch  
 - P1-P5: C  
 - P6: Python  
-- P7: SQL  
+- P7: Python & SQL  
 ### P1:  
 - hello.c - An obligatory "hello, world" program.  
 - mario.c - Prints a 2D pyramid in the terminal window (as seen in Nintendo’s Super Mario Brothers). Uses do-while & for loops.  
@@ -22,3 +22,7 @@ https://cs50.harvard.edu/x/2020/
 - credit.py - P1's credit.c in Python. Uses lists, while loops, arithmetic.  
 - readability.py - P2's readability.c in Python.  
 - dna.py - Checks against a database for matching DNA sequences by analyzing Short Tandem Repeats. Uses while loops, csv library functions.  
+### P7:  
+- 1-13.sql - Operations & functions used: SELECT, JOIN, WHERE, IN, LIKE, ORDER BY, LIMIT, COUNT, %, AVG, DISTINCT.  
+- import.py - Transforms & imports student data from csv to sql db. Uses sqlite3, csv & sys library functions.  
+- roster.py - Generates class rosters from sql db. Uses sqlite3, csv & sys library functions.  
