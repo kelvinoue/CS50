@@ -1,5 +1,5 @@
 # CS50p
-An archive of completed CS50 Problem Sets. C, Python, SQL & others.
+An archive of completed CS50 Problem Sets. Written in C, Python, SQL & others.
 
 https://cs50.harvard.edu/x/2020/  
 
